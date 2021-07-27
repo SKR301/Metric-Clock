@@ -109,7 +109,7 @@
     const mHour = Math.floor(secsPassedTodayMetrics / 10000);
     const mMin = Math.floor((secsPassedTodayMetrics - mHour * 10000) / 100);
     const mSec = Math.floor(secsPassedTodayMetrics - (mHour * 10000) - (mMin * 100));
-    const mMs = Math.floor(dateTime.getMilliseconds() / oldSecToNewSecRatio);
+    const mMs = dateTime.getMilliseconds();
 
     metricYearElem.firstChild.nodeValue = Math.floor(mYear).toString();
     metricMonthElem.firstChild.nodeValue = Math.floor(mMonth).toString();
