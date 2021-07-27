@@ -34,7 +34,7 @@
   metricClock = function () {
     const dateTime = new Date();
 
-    const daysAfterGenesis = Math.floor(dateTime.getMilliseconds() / msInADay);
+    const daysAfterGenesis = Math.floor(dateTime.getTime() / msInADay);
     const secsPassedToday = dateTime.getHours() * secsInHr + dateTime.getMinutes() *
       secsInMint + dateTime.getSeconds();
 
