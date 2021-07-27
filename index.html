@@ -12,49 +12,28 @@
 <a id="metricHour">0</a>:
 <a id="metricMint">0</a>:
 <a id="metricSec">0</a>:
-<a id="metricMili">0</a>
+<a id="metricMilli">0</a>
 
 </body>
 <script type="text/javascript">
-  const daysTillGenesis = 719529;		//days passed till 1/1/1971
-  const msInADay = 86400000;
-  const secsInHr = 3600;
-  const secsInMint = 60;
-  const oldSecToNewSecRatio = 0.864;
-
   const metricYearElem = document.getElementById('metricYear');
   const metricMonthElem = document.getElementById('metricMonth');
   const metricDayElem = document.getElementById('metricDay');
   const metricHourElem = document.getElementById('metricHour');
   const metricMintElem = document.getElementById('metricMint');
   const metricSecElem = document.getElementById('metricSec');
-  const metricMiliElem = document.getElementById('metricMili');
+  const metricMilliElem = document.getElementById('metricMilli');
 
 
   metricClock = function () {
     const dateTime = new Date();
-    const timeInMS = Date.now();
-    const daysAfterGenesis = Math.floor(timeInMS / msInADay);
-    const secsPassedToday = dateTime.getHours() * secsInHr + dateTime.getMinutes() * secsInMint + dateTime.getSeconds();
-
-    const daysPassed = daysAfterGenesis + daysTillGenesis;
-    const secsPassedTodayMetrics = secsPassedToday / oldSecToNewSecRatio;
-
-    const metricYear = Math.floor(daysPassed / 1000);
-    const metricMonth = Math.floor((daysPassed - metricYear * 1000) / 100);
-    const metricDay = Math.floor(daysPassed - (metricYear * 1000) - (metricMonth * 100));
-    const metricHour = Math.floor(secsPassedTodayMetrics / 10000);
-    const metricMint = Math.floor((secsPassedTodayMetrics - metricHour * 10000) / 100);
-    const metricSec = Math.floor(secsPassedTodayMetrics - (metricHour * 10000) - (metricMint * 100));
-    const metricMs = Math.floor((secsPassedTodayMetrics - (metricHour * 10000) - (metricMint * 100) - metricSec) * 1000);
-
-    metricYearElem.firstChild.nodeValue = metricYear;
-    metricMonthElem.firstChild.nodeValue = metricMonth;
-    metricDayElem.firstChild.nodeValue = metricDay;
-    metricHourElem.firstChild.nodeValue = metricHour;
-    metricMintElem.firstChild.nodeValue = metricMint;
-    metricSecElem.firstChild.nodeValue = metricSec;
-    metricMiliElem.firstChild.nodeValue = metricMs;
+    metricYearElem.firstChild.nodeValue = String(dateTime.getFullYear());
+    metricMonthElem.firstChild.nodeValue = String(dateTime.getMonth());
+    metricDayElem.firstChild.nodeValue = String(dateTime.getDate());
+    metricHourElem.firstChild.nodeValue = String(dateTime.getHours());
+    metricMintElem.firstChild.nodeValue = String(dateTime.getMinutes());
+    metricSecElem.firstChild.nodeValue = String(dateTime.getSeconds());
+    metricMilliElem.firstChild.nodeValue = String(dateTime.getMilliseconds());
   };
 
   setInterval(metricClock, 0)
