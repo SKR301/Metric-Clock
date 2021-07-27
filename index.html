@@ -24,16 +24,38 @@
   const metricSecElem = document.getElementById('metricSec');
   const metricMilliElem = document.getElementById('metricMilli');
 
+  const daysTillGenesis = 719529;		//days passed till 1/1/1971
+  const msInADay = 86400000;
+  const secsInHr = 3600;
+  const secsInMint = 60;
+  const oldSecToNewSecRatio = 0.864;
+
 
   metricClock = function () {
     const dateTime = new Date();
-    metricYearElem.firstChild.nodeValue = String(dateTime.getFullYear());
-    metricMonthElem.firstChild.nodeValue = String(dateTime.getMonth());
-    metricDayElem.firstChild.nodeValue = String(dateTime.getDate());
-    metricHourElem.firstChild.nodeValue = String(dateTime.getHours());
-    metricMintElem.firstChild.nodeValue = String(dateTime.getMinutes());
-    metricSecElem.firstChild.nodeValue = String(dateTime.getSeconds());
-    metricMilliElem.firstChild.nodeValue = String(dateTime.getMilliseconds());
+
+    const daysAfterGenesis = Math.floor(dateTime.getMilliseconds() / msInADay);
+    const secsPassedToday = dateTime.getHours() * secsInHr + dateTime.getMinutes() *
+      secsInMint + dateTime.getSeconds();
+
+    const daysPassed = daysAfterGenesis + daysTillGenesis;
+    const secsPassedTodayMetrics = secsPassedToday / oldSecToNewSecRatio;
+
+    const mYear = Math.floor(daysPassed / 1000);
+    const mMonth = Math.floor((daysPassed - mYear * 1000) / 100);
+    const mDay = Math.floor(daysPassed - (mYear * 1000) - (mMonth * 100));
+    const mHour = Math.floor(secsPassedTodayMetrics / 10000);
+    const mMin = Math.floor((secsPassedTodayMetrics - mHour * 10000) / 100);
+    const mSec = Math.floor(secsPassedTodayMetrics - (mHour * 10000) - (mMin * 100));
+    const mMs = Math.floor(dateTime.getMilliseconds() / oldSecToNewSecRatio);
+
+    metricYearElem.firstChild.nodeValue = Math.floor(mYear).toString();
+    metricMonthElem.firstChild.nodeValue = Math.floor(mMonth).toString();
+    metricDayElem.firstChild.nodeValue = Math.floor(mDay).toString();
+    metricHourElem.firstChild.nodeValue = Math.floor(mHour).toString();
+    metricMintElem.firstChild.nodeValue = Math.floor(mMin).toString();
+    metricSecElem.firstChild.nodeValue = Math.floor(mSec).toString();
+    metricMilliElem.firstChild.nodeValue = Math.floor(mMs).toString();
   };
 
   setInterval(metricClock, 0)
