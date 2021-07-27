@@ -16,18 +16,24 @@
 
 </body>
 <script type="text/javascript">
-  const tags = ["metricDay", "metricMonth", "metricYear", "metricHour", "metricMint", "metricSec", "metricMili"];
-
   const daysTillGenesis = 719529;		//days passed till 1/1/1971
   const msInADay = 86400000;
   const secsInHr = 3600;
   const secsInMint = 60;
   const oldSecToNewSecRatio = 0.864;
 
+  const metricYearElem = document.getElementById('metricYear');
+  const metricMonthElem = document.getElementById('metricMonth');
+  const metricDayElem = document.getElementById('metricDay');
+  const metricHourElem = document.getElementById('metricHour');
+  const metricMintElem = document.getElementById('metricMint');
+  const metricSecElem = document.getElementById('metricSec');
+  const metricMiliElem = document.getElementById('metricMili');
+
 
   metricClock = function () {
     const dateTime = new Date();
-    const timeInMS = dateTime.getTime();
+    const timeInMS = Date.now();
     const daysAfterGenesis = Math.floor(timeInMS / msInADay);
     const secsPassedToday = dateTime.getHours() * secsInHr + dateTime.getMinutes() * secsInMint + dateTime.getSeconds();
 
@@ -42,13 +48,13 @@
     const metricSec = Math.floor(secsPassedTodayMetrics - (metricHour * 10000) - (metricMint * 100));
     const metricMs = Math.floor((secsPassedTodayMetrics - (metricHour * 10000) - (metricMint * 100) - metricSec) * 1000);
 
-    const metric = [metricDay, metricMonth, metricYear, metricHour, metricMint, metricSec, metricMs];
-
-    for (let i = 0; i < tags.length; i++)
-      document.getElementById(tags[i]).firstChild.nodeValue = metric[i];
-
-    // document.getElementById('date').innerHTML = metricDay + ":" + metricMonth + ":" + metricYear;
-    // document.getElementById('time').innerHTML = metricHour + ":" + metricMint + ":" + metricSec + ":" + metricMs;
+    metricYearElem.firstChild.nodeValue = metricYear;
+    metricMonthElem.firstChild.nodeValue = metricMonth;
+    metricDayElem.firstChild.nodeValue = metricDay;
+    metricHourElem.firstChild.nodeValue = metricHour;
+    metricMintElem.firstChild.nodeValue = metricMint;
+    metricSecElem.firstChild.nodeValue = metricSec;
+    metricMiliElem.firstChild.nodeValue = metricMs;
   };
 
   setInterval(metricClock, 0)
