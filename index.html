@@ -4,16 +4,78 @@
   <meta charset="utf-8">
   <title>Metric-Clock</title>
 </head>
-<body>
+<style>
+  .container {
+    text-align: center;
+    background: #2d3436; /* fallback for old browsers */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    min-height: 100vh; /* will cover the 100% of viewport */
+  }
 
-<a id="metricDay">0</a>,
-<a id="metricMonth">0</a>-
-<a id="metricYear">0</a><br>
-<a id="metricHour">0</a>:
-<a id="metricMint">0</a>:
-<a id="metricSec">0</a>:
-<a id="metricMilli">0</a>
+  ul {
+    padding-inline-start: 0;
+  }
 
+  h1, h2, h3 {
+    font-weight: normal;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.0em;
+    list-style-type: none;
+    padding: 0.5em;
+    text-transform: uppercase;
+    min-width: 80px;
+    color: white;
+    cursor: pointer;
+  }
+
+  li span {
+    display: block;
+    font-size: 3.5rem;
+    min-width: 80px;
+    color: white;
+  }
+
+  li:hover {
+    transform: scale(1.2);
+  }
+
+  .dashed-border {
+    border-radius: 25px;
+    border-style: dashed;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-width: 2px;
+    margin: 5px;
+    padding: 10px;
+  }
+
+</style>
+<body style="padding: 0; margin: 0;">
+<div class="container">
+  <div class="dashed-border">
+    <h1>Metric Clock</h1>
+    <ul>
+      <li><span id="metricDay">0</span>Day</li>
+      <li><span id="metricMonth">0</span>Month</li>
+      <li><span id="metricYear">0</span>Year</li>
+    </ul>
+    <ul>
+      <li><span id="metricHour">0</span>Hours</li>
+      <li><span id="metricMint">0</span>Minutes</li>
+      <li><span id="metricSec">0</span>Seconds</li>
+    </ul>
+    <ul>
+      <li><span id="metricMilli">0</span>Millis</li>
+    </ul>
+  </div>
+</div>
 </body>
 <script type="text/javascript">
   const metricYearElem = document.getElementById('metricYear');
