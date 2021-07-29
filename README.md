@@ -16,5 +16,5 @@ A clock to tell time in metric(10) system
   ![Home](https://github.com/SKR301/Metric-Clock/blob/UI2/Screenshot/home.png)
   
   ## Contributors
-  @SKR301- [Saurav Kumar](https://github.com/SKR301)
+  @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
   @Martin- [Martin Kankaanranta](https://github.com/norkator)
