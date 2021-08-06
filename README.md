@@ -1,6 +1,8 @@
 # Metric-Clock
 A clock to tell time in metric(10) system
 
+!!ANALOG CLOCK!!
+
   ## Table of Content
   - [Technologies](#technologies)
   - [Screenshots](#screenshots)
@@ -11,10 +13,6 @@ A clock to tell time in metric(10) system
   - Bootstrap
   
   ## Screenshots
-  Some screenshots of the program:-
-  - *Home*<br />
-  ![Home](https://github.com/SKR301/Metric-Clock/blob/main/Screenshot/home.png)
+  Under progress
   
   ## Contributors
-  @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
-  @Martin- [Martin Kankaanranta](https://github.com/norkator)
