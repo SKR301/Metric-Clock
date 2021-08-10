@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Calender
+    </title>
+    <link rel="stylesheet" href="./calender.css">
+</head>
+
+
+<body onload="updateCal()">
+    <section>
+        <div class="box">
+            <div class="heading">
+                Normal Calender
+            </div>
+            <div class="calender">
+                <div class="ymbar">
+                    <div class="bar">
+                        <button class="mvbtn" id="mnthUpBtn">
+                            <i class="arrow up"></i>
+                        </button>
+                        <button class="ymbtn" id="mnthBtn">
+                            Month
+                        </button>
+                        <button class="mvbtn" id="mnthDwnBtn">
+                            <i class="arrow down"></i>
+                        </button>
+                    </div>
+                    <div class="bar">
+                        <button class="mvbtn" id="yrUpBtn">
+                            <i class="arrow up"></i>
+                        </button>
+                        <button class="ymbtn" id="yrBtn">
+                            Year
+                        </button>
+                        <button class="mvbtn" id="yrDwnBtn">
+                            <i class="arrow down"></i>
+                        </button>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            Mon
+                        </th>
+                        <th>
+                            Tue
+                        </th>
+                        <th>
+                            Wed
+                        </th>
+                        <th>
+                            Thu
+                        </th>
+                        <th>
+                            Fri
+                        </th>
+                        <th>
+                            Sat
+                        </th>
+                        <th>
+                            Sun
+                        </th>
+                    </tr>
+                    <tr>
+
+                        <td id="0mon">
+                            1
+                        </td>
+                        <td id="0tue">
+                            2
+                        </td>
+                        <td id="0wed">
+                            3
+                        </td>
+                        <td id="0thu">
+                            4
+                        </td>
+                        <td id="0fri">
+                            5
+                        </td>
+                        <td id="0sat">
+                            6
+                        </td>
+                        <td id="0sun" class="sun">
+                            7
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td id="1mon">
+                            1
+                        </td>
+                        <td id="1tue">
+                            2
+                        </td>
+                        <td id="1wed">
+                            3
+                        </td>
+                        <td id="1thu">
+                            4
+                        </td>
+                        <td id="1fri">
+                            5
+                        </td>
+                        <td id="1sat">
+                            6
+                        </td>
+                        <td id="1sun" class="sun">
+                            7
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td id="2mon">
+                            1
+                        </td>
+                        <td id="2tue">
+                            2
+                        </td>
+                        <td id="2wed">
+                            3
+                        </td>
+                        <td id="2thu">
+                            4
+                        </td>
+                        <td id="2fri">
+                            5
+                        </td>
+                        <td id="2sat">
+                            6
+                        </td>
+                        <td id="2sun" class="sun">
+                            7
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td id="3mon">
+                            1
+                        </td>
+                        <td id="3tue">
+                            2
+                        </td>
+                        <td id="3wed">
+                            3
+                        </td>
+                        <td id="3thu">
+                            4
+                        </td>
+                        <td id="3fri">
+                            5
+                        </td>
+                        <td id="3sat">
+                            6
+                        </td>
+                        <td id="3sun" class="sun">
+                            7
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td id="4mon">
+                            1
+                        </td>
+                        <td id="4tue">
+                            2
+                        </td>
+                        <td id="4wed">
+                            3
+                        </td>
+                        <td id="4thu">
+                            4
+                        </td>
+                        <td id="4fri">
+                            5
+                        </td>
+                        <td id="4sat">
+                            6
+                        </td>
+                        <td id="4sun" class="sun">
+                            7
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td id="5mon">
+                            1
+                        </td>
+                        <td id="5tue">
+                            2
+                        </td>
+                        <td id="5wed">
+                            3
+                        </td>
+                        <td id="5thu">
+                            4
+                        </td>
+                        <td id="5fri">
+                            5
+                        </td>
+                        <td id="5sat">
+                            6
+                        </td>
+                        <td id="5sun" class="sun">
+                            7
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="box">
+            <div class="heading">
+                Metric Calender
+            </div>
+            <div class="calender">
+                <div class="ymbar">
+                    <div class="bar">
+                        <button class="mvbtn" id="mnthUpBtnM">
+                            <i class="arrow up"></i>
+                        </button>
+                        <button class="ymbtn" id="mnthBtnM">
+                            Month
+                        </button>
+                        <button class="mvbtn" id="mnthDwnBtnM">
+                            <i class="arrow down"></i>
+                        </button>
+                    </div>
+                    <div class="bar">
+                        <button class="mvbtn" id="yrUpBtnM">
+                            <i class="arrow up"></i>
+                        </button>
+                        <button class="ymbtn" id="yrBtnM">
+                            Year
+                        </button>
+                        <button class="mvbtn" id="yrDwnBtnM">
+                            <i class="arrow down"></i>
+                        </button>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th>
+                            Day1
+                        </th>
+                        <th>
+                            Day2
+                        </th>
+                        <th>
+                            Day3
+                        </th>
+                        <th>
+                            Day4
+                        </th>
+                        <th>
+                            Day5
+                        </th>
+                        <th>
+                            Day6
+                        </th>
+                        <th>
+                            Day7
+                        </th>
+                        <th>
+                            Day8
+                        </th>
+                        <th>
+                            Day9
+                        </th>
+                        <th>
+                            Day10
+                        </th>
+                    </tr>
+                    <tr>
+                        <td id="00">
+                            1
+                        </td>
+                        <td id="01">
+                            2
+                        </td>
+                        <td id="02" >
+                            3
+                        </td>
+                        <td id="03">
+                            4
+                        </td>
+                        <td id="04" class="sun">
+                            5
+                        </td>
+                        <td id="05">
+                            6
+                        </td>
+                        <td id="06">
+                            7
+                        </td>
+                        <td id="07">
+                            8
+                        </td>
+                        <td id="08">
+                            9
+                        </td>
+                        <td id="09" class="sun">
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="10">
+                            11
+                        </td>
+                        <td id="11">
+                            12
+                        </td>
+                        <td id="12">
+                            13
+                        </td>
+                        <td id="13">
+                            14
+                        </td>
+                        <td id="14"class="sun">
+                            15
+                        </td>
+                        <td id="15" >
+                            16
+                        </td>
+                        <td id="16">
+                            17
+                        </td>
+                        <td id="17">
+                            18
+                        </td>
+                        <td id="18">
+                            19
+                        </td>
+                        <td id="19" class="sun">
+                            20
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="20">
+                            21
+                        </td>
+                        <td id="21">
+                            22
+                        </td>
+                        <td id="22">
+                            23
+                        </td>
+                        <td id="23">
+                            24
+                        </td>
+                        <td id="24" class="sun">
+                            25
+                        </td>
+                        <td id="25">
+                            26
+                        </td>
+                        <td id="26">
+                            27
+                        </td>
+                        <td id="27">
+                            28
+                        </td>
+                        <td id="28">
+                            29
+                        </td>
+                        <td id="29" class="sun">
+                            30
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="30">
+                            31
+                        </td>
+                        <td id="31">
+                            32
+                        </td>
+                        <td id="32">
+                            33
+                        </td>
+                        <td id="33">
+                            34
+                        </td>
+                        <td id="34" class="sun">
+                            35
+                        </td>
+                        <td id="35">
+                            36
+                        </td>
+                        <td id="36">
+                            37
+                        </td>
+                        <td id="37">
+                            38
+                        </td>
+                        <td id="38">
+                            39
+                        </td>
+                        <td id="39" class="sun">
+                            40
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="40">
+                            41
+                        </td>
+                        <td id="41">
+                            42
+                        </td>
+                        <td id="42">
+                            43
+                        </td>
+                        <td id="43">
+                            44
+                        </td>
+                        <td id="44" class="sun">
+                            45
+                        </td>
+                        <td id="45">
+                            46
+                        </td>
+                        <td id="46">
+                            47
+                        </td>
+                        <td id="47">
+                            48
+                        </td>
+                        <td id="48">
+                            49
+                        </td>
+                        <td id="49" class="sun">
+                            50
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="50">
+                            51
+                        </td>
+                        <td id="51">
+                            52
+                        </td>
+                        <td id="52"  >
+                            53
+                        </td>
+                        <td id="53">
+                            54
+                        </td>
+                        <td id="54"class="sun">
+                            55
+                        </td>
+                        <td id="55" >
+                            56
+                        </td>
+                        <td id="56">
+                            57
+                        </td>
+                        <td id="57">
+                            58
+                        </td>
+                        <td id="58">
+                            59
+                        </td>
+                        <td id="59" class="sun">
+                            60
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="60">
+                            61
+                        </td>
+                        <td id="61">
+                            62
+                        </td>
+                        <td id="62" >
+                            63
+                        </td>
+                        <td id="63">
+                            64
+                        </td>
+                        <td id="64" class="sun">
+                            65
+                        </td>
+                        <td id="65">
+                            66
+                        </td>
+                        <td id="66">
+                            67
+                        </td>
+                        <td id="67">
+                            68
+                        </td>
+                        <td id="68">
+                            69
+                        </td>
+                        <td id="69" class="sun">
+                            70
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="70">
+                            71
+                        </td>
+                        <td id="71">
+                            72
+                        </td>
+                        <td id="72">
+                            73
+                        </td>
+                        <td id="73">
+                            74
+                        </td>
+                        <td id="74" class="sun">
+                            75
+                        </td>
+                        <td id="75">
+                            76
+                        </td>
+                        <td id="76">
+                            77
+                        </td>
+                        <td id="77">
+                            78
+                        </td>
+                        <td id="78">
+                            79
+                        </td>
+                        <td id="79" class="sun">
+                            80
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="80">
+                            81
+                        </td>
+                        <td id="81">
+                            82
+                        </td>
+                        <td id="82">
+                            83
+                        </td>
+                        <td id="83">
+                            84
+                        </td>
+                        <td id="84" class="sun">
+                            85
+                        </td>
+                        <td id="85">
+                            86
+                        </td>
+                        <td id="86">
+                            87
+                        </td>
+                        <td id="87">
+                            88
+                        </td>
+                        <td id="88">
+                            89
+                        </td>
+                        <td id="89" class="sun">
+                            90
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="90">
+                            91
+                        </td>
+                        <td id="91">
+                            92
+                        </td>
+                        <td id="92">
+                            93
+                        </td>
+                        <td id="93">
+                            94
+                        </td>
+                        <td id="94" class="sun">
+                            95
+                        </td>
+                        <td id="95">
+                            96
+                        </td>
+                        <td id="96">
+                            97
+                        </td>
+                        <td id="97">
+                            98
+                        </td>
+                        <td id="98">
+                            99
+                        </td>
+                        <td id="99" class="sun">
+                            100
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="calender.js"></script>
+    </section>
+
+
+
+</body>
+
+</html>
