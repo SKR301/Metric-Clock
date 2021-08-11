@@ -6,13 +6,22 @@
     <title>Metric-Clock</title>
 </head>
 
-<body class="bg-dark text-center">
+<body class="bg-dark">
 
-<header class="display-1 text-light mt-5">
+<!-- nav bar -->
+<ul class="list-inline text-light p-2">
+  <li class="list-inline-item"><a class="text-info" href="#"><u>Home</u></a></li>
+  <li class="list-inline-item"><a class="text-secondary" href="analog-clock/index.html"><u>Analog</u></a></li>
+  <li class="list-inline-item"><a class="text-secondary" href="calendar/index.html"><u>Calendar</u></a></li>
+</ul>
+
+<!-- title -->
+<header class="display-1 text-light mt-5 text-center">
     METRIC CLOCK
 </header>
 
-<div class="text-warning display-4 container w-25 mt-5 pt-5">
+<!-- date -->
+<div class="text-warning display-4 container w-25 mt-5 pt-5 text-center">
     <div class="row">
         <div class="col-2" id="metricDay">
             0
@@ -31,9 +40,9 @@
         </div>        
     </div>
 </div>
-<div class="text-secondary container w-25">
+<div class="text-secondary container w-25 text-center">
     <div class="row">
-        <div class="col-2" style="margin-left: 10px;">
+        <div class="col-2">
             (Day)
         </div>
         <div class="col-2">
@@ -49,7 +58,8 @@
     </div>
 </div>
 
-<div class="display-1 text-info container w-50 mt-5">
+<!-- time -->
+<div class="display-1 text-info container w-50 mt-5 text-center">
     <div class="row">
         <div class="col-2" id="metricHour">
             0
@@ -75,7 +85,7 @@
     </div>
 </div>
 
-<div class="text-secondary container w-50">
+<div class="text-secondary container w-50 text-center">
     <div class="row">
         <div class="col-2" style="">
             (Hour)

@@ -1,6 +1,3 @@
-
-
-
 function updateCal() {
     const dateTime = new Date();
     const day = dateTime.getDay();
@@ -14,7 +11,6 @@ function updateCal() {
     let index = Math.floor(date / 7);
 
     let temp = date;
-
 
     let totalPrev = daysInMonth[(month + 11) % 12];
     let total = daysInMonth[month];
@@ -71,10 +67,6 @@ function updateCal() {
     document.getElementById("mnthBtn").innerHTML = months[month];
     document.getElementById("yrBtn").innerHTML = year.toString();
 
-
-
-
-
     const daysTillGenesis = 719529;   //days passed till 1/1/1971
     const msInADay = 86400000;
     const secsInHr = 3600;
@@ -85,31 +77,17 @@ function updateCal() {
     const msInSec = 1000;
     const conversionRatio = 0.864;
     let daysAfterGenesis = Math.floor(dateTime.getTime() / msInADay);
-    let secsPassedToday = dateTime.getHours() * secsInHr + dateTime.getMinutes() *
-        secsInMint + dateTime.getSeconds();
-
-
-    let msPassedToday = dateTime.getHours() * msInHr + dateTime.getMinutes() * msInMint + dateTime.getSeconds() * msInSec + dateTime.getMilliseconds();
-    let msPassedTodayMetrics = msPassedToday / conversionRatio;
     let daysPassed = daysAfterGenesis + daysTillGenesis;
-    let secsPassedTodayMetrics = secsPassedToday / oldSecToNewSecRatio;
-
+    
     let mYear = Math.floor(daysPassed / 1000);
     let mMonth = Math.floor((daysPassed - mYear * 1000) / 100);
     let mDay = Math.floor(daysPassed - (mYear * 1000) - (mMonth * 100));
-    let mHour = Math.floor(secsPassedTodayMetrics / 10000);
-    let mMin = Math.floor((secsPassedTodayMetrics - mHour * 10000) / 100);
-    let mSec = Math.floor(secsPassedTodayMetrics - (mHour * 10000) - (mMin * 100));
-    let mMs = Math.floor(msPassedTodayMetrics - (mHour * 10000000) - (mMin * 100000) - (mSec * 1000));
-
-
+    
     document.getElementById("mnthBtnM").innerHTML="Month"+(mMonth);
     document.getElementById("yrBtnM").innerHTML=mYear;
     let dateStr = mDay>10?(mDay-1).toString():"0"+(mDay-1);
 
     document.getElementById(dateStr).style.color="#222";
     document.getElementById(dateStr).style.background="#fffc";
-
-
 
 }

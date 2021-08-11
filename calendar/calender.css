@@ -1,5 +1,3 @@
-
-
 section{
     width:auto;
     align-self: center;
@@ -10,22 +8,19 @@ section{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(32deg ,#222,#fff);
+    /*background: linear-gradient(32deg ,#222,#fff);*/
     overflow: hidden;
 }
-
 
 .heading{
     display: flex;
     width: auto;
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
     margin-top: 10px;
     color: #fffe;
 
 }
-
 
 .box{
     position: relative;
@@ -89,7 +84,6 @@ td:hover{
     transition: 0s;
 }
 
-
 .sun{
     width: 100px;
     border-radius: 4px;
@@ -142,14 +136,12 @@ td:hover{
     transition: 0s;
 }
 
-
-    .arrow {
-        border: solid #fff;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-      }
-
+.arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
 
 .right {
     transform: rotate(-45deg);
