@@ -13,7 +13,9 @@ A clock to tell time in metric(10) system
   ## Screenshots
   Some screenshots of the program:-
   - *Home*<br />
-  ![Home](https://github.com/SKR301/Metric-Clock/blob/main/Screenshot/home.png)
+  ![Home](https://github.com/SKR301/Metric-Clock/blob/beta/ScreenShot/MetricClock.png)
+  - *Analog-Clock*<br />
+  ![Analog-Clock](https://github.com/SKR301/Metric-Clock/blob/beta/ScreenShot/AnalogClock.png)
   
   ## Contributors
   @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
