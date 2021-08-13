@@ -19,5 +19,5 @@ A clock to tell time in metric(10) system
   
   ## Contributors
   @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
-  @Martin- [Martin Kankaanranta](https://github.com/norkator) <br />
+  @norkator- [Martin Kankaanranta](https://github.com/norkator) <br />
   @Akshayaap- [Akshay Parmar](https://github.com/Akshayaap) <br />
