@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+
+<!-- nav bar -->
+<ul class="list-inline text-light p-2">
+  <li class="list-inline-item"><a class="text-secondary" href="../index.html"><u>Home</u></a></li>
+  <li class="list-inline-item"><a class="text-info" href="#"><u>Analog</u></a></li>
+  <li class="list-inline-item"><a class="text-secondary" href="../calendar/index.html"><u>Calendar</u></a></li>
+</ul>
+
+<header class="display-1 text-light mt-5 text-center">
+    ANALOG CLOCK
+</header>
+
+<main>
+    <div class="w-75 mx-auto mt-5 content text-center">
+        <div class="container">
+            <div class="row mt-5 text-info display-4">
+                <div class="col-6" style="margin-left: -50px;">
+                    Normal Clock
+                </div>
+                <div class="col-6">
+                    Metric Clock
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6">
+                    <div class="clk">
+                        <div class="hour">
+                            <div class="hr" id="hr">
+                            </div>
+                        </div>
+                        <div class="min">
+                            <div class="mn" id="mn">
+                            </div>
+                        </div>
+                        <div class="sec">
+                            <div class="sc" id="sc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="clkD">
+                        <div class="hourD">
+                            <div class="hrD" id="hrD">
+                            </div>
+                        </div>
+                        <div class="minD">
+                            <div class="mnD" id="mnD">
+                            </div>
+                        </div>
+                        <div class="secD">
+                            <div class="scD" id="scD">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+<script type="text/javascript" src="js.js"></script>
+</html>
