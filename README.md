@@ -8,7 +8,7 @@ A clock to tell time in metric(10) system
   
   ## Technologies
   - HTML
-  - Bootstrap
+  - Bootstrap v4
   
   ## Screenshots
   Some screenshots of the program:-
