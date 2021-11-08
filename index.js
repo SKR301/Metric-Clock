@@ -42,7 +42,7 @@ if(arg[2] == '-c'){
     } else{
         console.log('default');
     }
-} else if(arg[2] == '-h'){
+} else if(arg[2] == '-h' || arg[2] == '--help'){
     Util.help();
 } else {
     Util.invalidArguments(arg[2]);
