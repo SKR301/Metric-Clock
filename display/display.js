@@ -8,7 +8,7 @@ class Display{
 
     constructor(){
     }
-    static now(format){
+    static now(format = 'Time: %Hh:%Mm:%Ss\nDate: %dd/%mm/%yy'){
         this.dateTime = new Date();
 
         this.daysAfterGenesis = Math.floor(this.dateTime.getTime() / this.msInADay);
@@ -26,9 +26,9 @@ class Display{
         this.mSec = Math.floor((this.msPassedTodayMetrics - (this.mHour * 10000000) - (this.mMin * 100000)) / 1000);
         // this.mMs = Math.floor(this.msPassedTodayMetrics - (this.mHour * 10000000) - (this.mMin * 100000) - (this.mSec * 1000));
 
-        (format == undefined)?format = 'H:M:S d/m/y':true;
+        // (format == undefined)?format = 'Time: %Hh:%Mm:%Ss\nDate: %dd/%mm/%yy':true;
 
-        console.log(format.replaceAll('H',this.mHour).replaceAll('M',this.mMin).replaceAll('S',this.mSec).replaceAll('d',this.mDay).replaceAll('m',this.mMonth).replaceAll('y',this.mYear));
+        console.log(format.replaceAll('%H',this.mHour).replaceAll('%M',this.mMin).replaceAll('%S',this.mSec).replaceAll('%d',this.mDay).replaceAll('%m',this.mMonth).replaceAll('%y',this.mYear));
     }
 }
 

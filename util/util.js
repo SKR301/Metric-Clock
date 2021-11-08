@@ -31,12 +31,12 @@ class Util{
         display: {
             main: 'node index.js -now [${format}]',
             format_keywords: {
-                hour: 'H',
-                minute: 'M',
-                seconds: 'D',
-                day: 'd',
-                month: 'm',
-                year: 'y',
+                hour: '%H',
+                minute: '%M',
+                seconds: '%D',
+                day: '%d',
+                month: '%m',
+                year: '%y',
             }
         }
 
