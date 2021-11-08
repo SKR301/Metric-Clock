@@ -31,20 +31,24 @@ class Util{
         display: {
             main: 'node index.js -now [${format}]',
             format_keywords: {
-                hour: 'hh',
-                minute: 'MM',
-                seconds: 'ss',
-                day: 'ddd',
-                month: 'mm',
-                year: 'yyy',
+                hour: 'H',
+                minute: 'M',
+                seconds: 'D',
+                day: 'd',
+                month: 'm',
+                year: 'y',
             }
         }
 
     }
 
     static invalidArguments(arg){
-        console.log('\n`'+arg+'` isn\'t a valid arguments.');
-        console.log('\nUse `'+this.cmd.help+'` command to know more about available commands.');
+        if(arg == undefined){
+            console.log('No argument passed');
+        } else {
+            console.log('\n`'+arg+'` isn\'t a valid arguments.');
+        }
+        console.log('Use `'+this.cmd.help+'` command to know more about available commands.');
     }
     static help(){
         this.desc();
