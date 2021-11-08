@@ -1,5 +1,23 @@
-# Metric-Clock [Lib]
-A JS library for metric time system
+# Metric-Clock
+A clock to tell time in metric(10) system
 
-![help](https://user-images.githubusercontent.com/47807051/140700179-0d83ae44-c959-44c4-b977-ff1c387e9fac.png)
-
+  ## Table of Content
+  - [Technologies](#technologies)
+  - [Screenshots](#screenshots)
+  - [Contributors](#contributors)
+  
+  ## Technologies
+  - HTML
+  - Bootstrap
+  
+  ## Screenshots
+  Some screenshots of the program:-
+  - *Home*<br />
+  ![Home](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/MetricClock.png)
+  - *Analog*<br />
+  ![Analog](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/AnalogClock.png)
+  
+  ## Contributors
+  @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
+  @Martin- [Martin Kankaanranta](https://github.com/norkator) <br/>
+  @Akshay- [Akshay Parmar](https://github.com/Akshayaap) <br/>
