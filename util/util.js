@@ -21,9 +21,13 @@ class Util{
                 n2m: 'n2m',
             },
         },
-        // arithmatics: {
-        //     main: 'node index.js -c <arithmetic-type> [time|date] ${time|date} ${days|mints}'
-        // }
+        arithmetics: {
+            main: 'node index.js -c <arithmetic-type> [time|date] ${time|date} ${days|mints}',
+            arithmetic_type:{
+                add: 'a',
+                subtract: 's',
+            }
+        }
 
     }
 
@@ -45,6 +49,14 @@ class Util{
         console.log('\t [time|date]\t\t: '+'time'+'\t => Convert time from one system to other');
         console.log('\t [time|date]\t\t: '+'date'+'\t => Convert date from one system to other');
         console.log('\t ${time|date}\t\t: '+''+'\t => Date/Time value in specified format to convert');
+
+        console.log('\n5) '+this.cmd.arithmetics.main+'\t=> Add or subtract days or minutes from given date or time');
+        console.log('\t arithmetic-type\t: '+this.cmd.arithmetics.arithmetic_type.add+'\t => Add days or minutes');
+        console.log('\t arithmetic-type\t: '+this.cmd.arithmetics.arithmetic_type.subtract+'\t => Subtract days or minutes');
+        console.log('\t [time|date]\t\t: '+'time'+'\t => Add or Subtract minutes from time');
+        console.log('\t [time|date]\t\t: '+'date'+'\t => Add or Subtract days from date');
+        console.log('\t ${time|date}\t\t: '+''+'\t => Initial Date/Time value in specified format');
+        console.log('\t ${days|mints}\t\t: '+''+'\t => Days or minute to add or subtract');
         
     }
     static desc(){
