@@ -16,8 +16,10 @@ A clock to tell time in metric(10) system
   ![Home](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/MetricClock.png)
   - *Analog*<br />
   ![Analog](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/AnalogClock.png)
+  - *Library*<br />
+  ![Help](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/lib-help.png)
   
   ## Contributors
   @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
-  @Martin- [Martin Kankaanranta](https://github.com/norkator) <br/>
+  @Norkator- [Martin Kankaanranta](https://github.com/norkator) <br/>
   @Akshay- [Akshay Parmar](https://github.com/Akshayaap) <br/>
