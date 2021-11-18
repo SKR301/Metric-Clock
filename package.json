@@ -1,30 +1,11 @@
 {
-  "name": "metric-clock",
-  "version": "1.0.0",
-  "description": "A clock to tell time in metric(10) system",
-  "main": "./lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "jest",
-    "build": "echo \"Error: no build script specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SKR301/Metric-Clock.git"
-  },
-  "author": "SKR301",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SKR301/Metric-Clock/issues"
-  },
-  "homepage": "https://github.com/SKR301/Metric-Clock#readme",
-  "private": false,
   "devDependencies": {
     "@babel/preset-env": "^7.16.0",
     "babel-jest": "^27.3.1",
     "jest": "^27.3.1"
+  },
+  "scripts": {
+    "test": "jest"
   },
   "jest": {
     "transform": {
