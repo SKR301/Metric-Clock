@@ -1,2 +1,5 @@
 # IDE
 .idea
+
+# Source files
+node_modules
