@@ -11,6 +11,7 @@ A clock to tell time in metric(10) system
 ## Technologies
 - HTML
 - Bootstrap
+- Node.js
 
 
 ## Publishing
@@ -30,11 +31,10 @@ Some screenshots of the program:-
 ![Home](./ScreenShot/MetricClock.png)
 - *Analog*<br />
 ![Analog](./ScreenShot/AnalogClock.png)
-- *Library*<br />
+- *Cli-Library*<br />
 ![Help](./ScreenShot/lib-help.png)
 
 
 ## Contributors
 @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
 @Norkator- [Martin Kankaanranta](https://github.com/norkator) <br/>
-@Akshay- [Akshay Parmar](https://github.com/Akshayaap) <br/>
