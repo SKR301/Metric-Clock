@@ -10,6 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Asia/Kolkata"
+          timezoneMacos: "Asia/Kolkata"
+          timezoneWindows: "India Standard Time"
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
