@@ -1,4 +1,4 @@
-import Arithmetic from '../cli-lib/arithmetic/arithmetic.js';
+import Arithmetic from '../lib/arithmetic/arithmetic.js';
 
 test('addTime=> Add 1 mint in between:', () => {
     expect(Arithmetic.addTime('1','5:50:00')).toBe('5:51:00');
