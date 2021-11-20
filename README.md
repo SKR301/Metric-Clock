@@ -13,11 +13,11 @@ A clock to tell time in metric(10) system
   ## Screenshots
   Some screenshots of the program:-
   - *Home*<br />
-  ![Home](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/MetricClock.png)
+  ![Home](./ScreenShot/MetricClock.png)
   - *Analog*<br />
-  ![Analog](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/AnalogClock.png)
+  ![Analog](./ScreenShot/AnalogClock.png)
   - *Library*<br />
-  ![Help](https://github.com/SKR301/Metric-Clock/blob/main/ScreenShot/lib-help.png)
+  ![Help](./ScreenShot/lib-help.png)
   
   ## Contributors
   @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
