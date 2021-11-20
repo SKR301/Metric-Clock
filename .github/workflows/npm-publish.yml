@@ -16,7 +16,7 @@ jobs:
           node-version: 14
       - run: npm install
       - run: npm run test
-      - run: npm run build
+      # - run: npm run build
 
   publish-npm:
     needs: build
@@ -28,7 +28,7 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm run build
+      # - run: npm run build
       - run: npm pack
       - run: npm publish
         env:
