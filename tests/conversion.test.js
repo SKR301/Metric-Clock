@@ -1,4 +1,4 @@
-import Conversion from '../cli-lib/conversion/conversion';
+import Conversion from '../lib/conversion/conversion';
 
 test('m2n Time=> Convert metric time to normal:', () => {
     expect(Conversion.m2nTime('8:96:00').substr(0,5)).toBe('21:30');
