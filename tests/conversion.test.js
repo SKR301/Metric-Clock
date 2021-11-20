@@ -17,5 +17,5 @@ test('m2n Date=> Convert metric date to normal:', () => {
     expect(Conversion.m2nDate('59-4-0738')).toBe('30-10-2021');
 });
 test('n2m Date=> Convert normal date to metric:', () => {
-    expect(Conversion.n2mDate('30-10-2021')).toBe('59-4-0738');
+    expect(Conversion.n2mDate('29-10-2021')).toBe('58-4-0738');
 });
