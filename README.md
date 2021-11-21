@@ -5,7 +5,6 @@ A clock to tell time in metric(10) system
 ## Table of Contents
 - [Technologies](#technologies)
 - [Publishing](#publishing)
-- [Screenshots](#screenshots)
 - [Contributors](#contributors)
 
 
@@ -24,17 +23,6 @@ Testing packing locally, you can run:
 ```shell script
 npm pack
 ```
-
-
-## Screenshots
-Some screenshots of the program:-
-- *Home*<br />
-![Home](./ScreenShot/MetricClock.png)
-- *Analog*<br />
-![Analog](./ScreenShot/AnalogClock.png)
-- *Cli-Library*<br />
-![Help](./ScreenShot/lib-help.png)
-
 
 ## Contributors
 @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
