@@ -27,3 +27,4 @@ npm pack
 ## Contributors
 @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
 @Norkator- [Martin Kankaanranta](https://github.com/norkator) <br/>
+@Akshayaap- [Akshay Parmar](https://github.com/Akshayaap) <br />
