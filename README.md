@@ -1,5 +1,6 @@
 # Metric-Clock
-A clock to tell time in metric(10) system
+A clock to tell time in metric(10) system. <br />
+[Click here for documentations](https://github.com/SKR301/Metric-Clock/blob/doc/docs)
 
 
 ## Table of Contents
@@ -7,12 +8,10 @@ A clock to tell time in metric(10) system
 - [Publishing](#publishing)
 - [Contributors](#contributors)
 
-
 ## Technologies
-- HTML
-- Bootstrap
-- Node.js
-
+- HTML5
+- Bootstrap v4
+- Node.js v16.13.0
 
 ## Publishing
 1. Create new tag and release
