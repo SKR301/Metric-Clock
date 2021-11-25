@@ -14,6 +14,7 @@ A clock to tell time in metric(10) system. <br />
 - Node.js v16.13.0
 
 ## Library
+[Documentations](https://github.com/SKR301/Metric-Clock/blob/doc/docs.md)
 #### 1. Importing
 Import the package in the file you want to use it along with all other necessary imported libraries
 ```js
