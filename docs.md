@@ -34,10 +34,10 @@ If done correctly the above command would result in something like: <br />
 The output may vary depending on the day/time you use it.
 
 ## - now(format)
-`format: string value representing the format for output or empty`<br>
-`return: Metric datetime in given format`<br>
+`format: (string) => Representing the format for output or empty`<br>
+`return: (string) => Metric datetime in given format`<br>
 
-The now function display the current metric time in provided format. It takes a string as a parameter which represent the format you want you output in, and returns the current data and time. You can modify the format as you like, by default it's <br />**Time: %Hh:%Mm:%Ss\nDate: %dd-%mm-%yy** Given below are list of available formatting variable keywords<br />
+The **now** function display the current metric time in provided format. It takes a string as a parameter which represent the format you want you output in, and returns the current data and time. You can modify the format as you like, by default it's <br />**Time: %Hh:%Mm:%Ss\nDate: %dd-%mm-%yy** Given below are list of available formatting variable keywords<br />
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/47807051/143493078-8070610b-4c56-430a-95f4-9fbb0fd98bd8.png" alt="format_keyowrds"/>
@@ -57,5 +57,97 @@ export default function App() {
 ```
 Which results in 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/47807051/143493447-0ad2df70-a13d-435b-8d1b-40a8d956758e.png" alt="format_keyowrds"/>
+  <img src="https://user-images.githubusercontent.com/47807051/143493447-0ad2df70-a13d-435b-8d1b-40a8d956758e.png" alt="now"/>
+</p>
+
+## - addTime(mint, time)
+`mint: (int) => Minutes to add to given time`<br>
+`time: (string) => Initial time in {h-mm-ss} format or empty`<br>
+`return: (string) => Time after ${mint} minutes from ${time}`<br>
+
+As the name suggests it adds certain minutes to given metric time in proper format (i.e. h-mm-ss). You can also leave the time part empty in which case it'll add the minutes to current metric time. Following code shows an example on how to use it<br />
+
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Adding 10 mints to '5:50:00' = {clock.addTime(10, '5:50:00')}</Text> 					
+		<Text>Adding 10 mints to current metric time = {clock.addTime(10)}</Text> 					
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143624980-4fc1231c-13f1-49db-bb0d-223729dea5d3.png" alt="addTime"/>
+</p>
+
+## - subTime(mint, time)
+`mint: (int) => Minutes to subtract from given time`<br>
+`time: (string) => Initial time in {h-mm-ss} format or empty`<br>
+`return: (string) => Time before ${mint} minutes prior to ${time}`<br>
+
+As the name suggests it subtracts certain minutes to given metric time in proper format (i.e. h-mm-ss). You can also leave the time part empty in which case it'll subtract the minutes from current metric time. Following code shows an example on how to use it<br />
+
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Adding 10 mints to '5:50:00' = {clock.subTime(10, '5:50:00')}</Text> 					
+		<Text>Adding 10 mints to current metric time = {clock.subTime(10)}</Text> 					
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143625142-266cf17a-6fa9-4645-8247-4c8bace6172d.png" alt="subTime"/>
+</p>
+
+## - addDate(days, date)
+`days: (int) => Days to add to given date`<br>
+`date: (string) => Initial data in {dd-m-yyyy} format or empty`<br>
+`return: (string) => Date after ${days} days after ${date}`<br>
+
+As the name suggests it adds certain days to given metric date in proper format (i.e. dd-m-yyyy). You can also leave the date part empty in which case it'll add the days to current metric date. Following code shows an example on how to use it<br />
+
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Adding 10 days to '50-5-0500' = {clock.addDate(10, '50-5-0500')}</Text> 					
+		<Text>Adding 10 days to current metric time = {clock.addDate(10)}</Text> 					
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143625286-130358c3-53bb-4adf-9d61-21fe9e728ee5.png" alt="addDate"/>
+</p>
+
+## - subDate(days, date)
+`days: (int) => Days to subtract from given date`<br>
+`date: (string) => Initial data in {dd-m-yyyy} format or empty`<br>
+`return: (string) => Date before ${days} days prior to ${date}`<br>
+
+As the name suggests it subtracts certain days from given metric date in proper format (i.e. dd-m-yyyy). You can also leave the date part empty in which case it'll subtracts the days from current metric date. Following code shows an example on how to use it<br />
+
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Adding 10 days to '50-5-0500' = {clock.subDate(10, '50-5-0500')}</Text> 					
+		<Text>Adding 10 days to current metric time = {clock.subDate(10)}</Text> 					
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143625382-b3c04865-82dd-4ffa-bfcc-127e6b1fb68c.png" alt="subDate"/>
 </p>
