@@ -1,5 +1,9 @@
+**DSICLAIMER:** *To the few lifeless human beings who actually thought to visit and read this page, This documentation may contain some harsh language. The owner isn't responsible for your feelings at the end of this journey. I'm wasting way too much time in this stupid thing, I hope you put the package in some good use.*
+
 # Metric-Clock
 A clock to tell time in metric(10) system. **v1.1.0**
+<br /><br />
+*Ahh! here we go again...hate writing docs. No one is gonna read it anyway, and start raising issues and complaining. Ughhh. Anyway...*
 
 ## Installation
 ```shell script
@@ -17,7 +21,7 @@ Import the package in the file you want to use it along with all other necessary
 import clock from 'metric-clock'
 ```
 ### 2. Using
-All of the functions in the package return a string value, which you can print with
+All of the functions in the package returns a string value, which you can print with
 ```js
 export default function App() {
 	return (
@@ -27,16 +31,15 @@ export default function App() {
 	);
 }
 ```
-If done correctly the above command would result in something like: <br />
+If done correctly, *(which I doubt that you'd do)*, the above command would result in something like: <br />
 <p align="center">
   <img src="https://user-images.githubusercontent.com/47807051/143491078-5573e380-0f94-4f21-8743-a849dd6aa832.png" alt="demo"/>
 </p>
-The output may vary depending on the day/time you use it.
+The output may vary depending on the day/time you use it, *duh*.
 
 ## - now(format)
 `format: (string) => Representing the format for output or empty`<br>
-`return: (string) => Metric datetime in given format`<br>
-
+`return: (string) => Metric datetime in given format`<br><br>
 The **now** function display the current metric time in provided format. It takes a string as a parameter which represent the format you want you output in, and returns the current data and time. You can modify the format as you like, by default it's <br />**Time: %Hh:%Mm:%Ss\nDate: %dd-%mm-%yy** Given below are list of available formatting variable keywords<br />
 
 <p align="center">
@@ -63,8 +66,7 @@ Which results in
 ## - addTime(mint, time)
 `mint: (int) => Minutes to add to given time`<br>
 `time: (string) => Initial time in {h-mm-ss} format or empty`<br>
-`return: (string) => Time after ${mint} minutes from ${time}`<br>
-
+`return: (string) => Time after ${mint} minutes from ${time}`<br><br>
 As the name suggests it adds certain minutes to given metric time in proper format (i.e. h-mm-ss). You can also leave the time part empty in which case it'll add the minutes to current metric time. Following code shows an example on how to use it<br />
 
 ```js
@@ -86,8 +88,7 @@ Which results in
 ## - subTime(mint, time)
 `mint: (int) => Minutes to subtract from given time`<br>
 `time: (string) => Initial time in {h-mm-ss} format or empty`<br>
-`return: (string) => Time before ${mint} minutes prior to ${time}`<br>
-
+`return: (string) => Time before ${mint} minutes prior to ${time}`<br><br>
 As the name suggests it subtracts certain minutes to given metric time in proper format (i.e. h-mm-ss). You can also leave the time part empty in which case it'll subtract the minutes from current metric time. Following code shows an example on how to use it<br />
 
 ```js
@@ -106,11 +107,12 @@ Which results in
   <img src="https://user-images.githubusercontent.com/47807051/143625142-266cf17a-6fa9-4645-8247-4c8bace6172d.png" alt="subTime"/>
 </p>
 
+*Yes I copy pasted the documentation format, so what! You are gonna copy the codes from here anyway...Don't "copy shame" me! I'm gonna do it again, watch me.*
+
 ## - addDate(days, date)
 `days: (int) => Days to add to given date`<br>
 `date: (string) => Initial data in {dd-m-yyyy} format or empty`<br>
-`return: (string) => Date after ${days} days after ${date}`<br>
-
+`return: (string) => Date after ${days} days after ${date}`<br><br>
 As the name suggests it adds certain days to given metric date in proper format (i.e. dd-m-yyyy). You can also leave the date part empty in which case it'll add the days to current metric date. Following code shows an example on how to use it<br />
 
 ```js
@@ -132,8 +134,7 @@ Which results in
 ## - subDate(days, date)
 `days: (int) => Days to subtract from given date`<br>
 `date: (string) => Initial data in {dd-m-yyyy} format or empty`<br>
-`return: (string) => Date before ${days} days prior to ${date}`<br>
-
+`return: (string) => Date before ${days} days prior to ${date}`<br><br>
 As the name suggests it subtracts certain days from given metric date in proper format (i.e. dd-m-yyyy). You can also leave the date part empty in which case it'll subtracts the days from current metric date. Following code shows an example on how to use it<br />
 
 ```js
@@ -151,3 +152,88 @@ Which results in
 <p align="center">
   <img src="https://user-images.githubusercontent.com/47807051/143625382-b3c04865-82dd-4ffa-bfcc-127e6b1fb68c.png" alt="subDate"/>
 </p>
+
+## - m2nTime(time)
+`time: (string) => Time to convert in {h:mm:ss} format`<br>
+`return: (string) => Returns equivalent time in normal clock system`<br><br>
+This functions converts given metric system time to equivalent normal clock system time. The input format must be h:mm:ss.<br />
+Following code shows an example on how to use it
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Metric('5:50:00') = Normal ('{clock.m2nTime('5:50:00')}')</Text> 			
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143627652-48ce66d0-4b39-48f9-b290-39a52ed3428e.png" alt="m2nTime"/>
+</p>
+
+*You get the gist, right? You can figure out the other functions...*<br />
+*What?? You can't! BOO-HOO-HOO I'm a developer still I don't know how to figure small things out.*<br />
+*Did I hurt your petty little feeligns there buddy? Oh my bad...But sorry this ain't google which just shout out billion ways to centre a div.*<br />
+
+## - m2nDate(date)
+`date: (string) => Date to convert in {dd-m-yyyy} format`<br>
+`return: (string) => Returns equivalent date in normal clock system`<br><br>
+*Sorry fellas, I'm bored, don't wanna describe, you know how it'll work, here's example and output:*
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Metric('54-2-0730') = Normal ('{clock.m2nDate('54-2-0730')}')</Text>	
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143637477-9c6e7a77-6aec-4496-8de1-5ee4101a730a.png" alt="m2nDate"/>
+</p>
+
+## - n2mTime(time)
+`time: (string) => Time to convert in {hh:mm:ss} format`<br>
+`return: (string) => Returns equivalent time in metric clock system`<br><br>
+Following code shows an example on how to use it
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Normal ('13:12:00') = Metric ('{clock.n2mTime('13:12:00')}')</Text> 			
+		</View>
+	);
+}
+```
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143639190-b688ff1b-cfbc-4e98-8126-80958d517f8a.png" alt="n2mTime"/>
+</p>
+
+## - n2mDate(date)
+`date: (string) => Date to convert in {dd-mm-yyyy} format`<br>
+`return: (string) => Returns equivalent date in metric clock system`<br><br>
+Following code shows an example on how to use it
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+		<Text>Normal ('30-11-1999') = Metric ('{clock.n2mDate('30-11-1999')}')</Text> 			
+		</View>
+	);
+}
+```
+
+Which results in 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/47807051/143640604-2953de75-a30e-48fc-aa8f-8a8b0f6b8bad.png" alt="n2mDate"/>
+</p>
+
+*For anyone wondering why I chose 30-nov and not 14-May! Well that's none of your business...but 30th nov is my birthday*
+
+**Not gonna lie I thought I would totally hate this experience, but It wasn't as bad. Please put the package in some good use if you could. Hope you all lifeless beings a fun and loving life :)**<br /><br />
+*PS: The developers aren't working hard to solve any issues, so, be paitient, and try to solve them yourselve...JK, I'm on it!*
