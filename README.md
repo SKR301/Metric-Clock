@@ -1,30 +1,44 @@
 # Metric-Clock
-A clock to tell time in metric(10) system
+A clock to tell time in metric(10) system. <br />
+Refer to [documentations](https://github.com/SKR301/Metric-Clock/blob/doc/docs.md)
+for detailed instructions.
 
 
 ## Table of Contents
 - [Technologies](#technologies)
-- [Publishing](#publishing)
+- [Library](#library)
 - [Contributors](#contributors)
 
-
 ## Technologies
-- HTML
-- Bootstrap
-- Node.js
+- HTML5
+- Bootstrap v4
+- Node.js v16.13.0
 
-
-## Publishing
-1. Create new tag and release
-2. Publishing of package is done automatically by `./.github/workflows/npm-publish.yml` action.
-
-There's no need to build anything since its javascript library. 
-Testing packing locally, you can run:
-```shell script
-npm pack
+## Library
+[Documentations](https://github.com/SKR301/Metric-Clock/blob/doc/docs.md)
+#### 1. Importing
+Import the package in the file you want to use it along with all other necessary imported libraries
+```js
+import clock from 'metric-clock'
+```
+#### 2. Using
+All of the functions in the package return a string value, which you can print with
+```js
+export default function App() {
+	return (
+		<View style={styles.container}>
+			<Text>{clock.now()}</Text> 	{/* used the lib here*/}
+		</View>
+	);
+}
 ```
 
 ## Contributors
 @SKR301- [Saurav Kumar](https://github.com/SKR301) <br/>
 @Norkator- [Martin Kankaanranta](https://github.com/norkator) <br/>
 @Akshayaap- [Akshay Parmar](https://github.com/Akshayaap) <br />
+### Found a bug?
+- Raise an issue
+### Want to Contribute!
+- Fork the repo
+- Create a Pull Request
