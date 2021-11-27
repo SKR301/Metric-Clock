@@ -1,6 +1,7 @@
 # Metric-Clock
 A clock to tell time in metric(10) system. <br />
-[Documentations](https://github.com/SKR301/Metric-Clock/blob/doc/docs.md)
+Refer to [documentations](https://github.com/SKR301/Metric-Clock/blob/doc/docs.md)
+for detailed instructions.
 
 
 ## Table of Contents

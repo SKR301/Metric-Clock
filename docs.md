@@ -1,4 +1,4 @@
-**DSICLAIMER:** *I'm wasting way too much time in this documentation thing, I hope you put the package to some good use.*
+**DSICLAIMER:** *I have spent a lot of time to create this documentation, so I hope you put the package to some good use.*
 
 # Metric-Clock
 A clock to tell time in metric(10) system. **v1.1.0**
@@ -229,4 +229,4 @@ Which results in
   <img src="https://user-images.githubusercontent.com/47807051/143640604-2953de75-a30e-48fc-aa8f-8a8b0f6b8bad.png" alt="n2mDate"/>
 </p>
 
-*PS: Developer are working on the issues, please be patient and kindly help if you can :D, b-bye*
+*PS: Developer are working on the issues, please be patient and kindly help if you can.*
