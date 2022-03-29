@@ -40,7 +40,7 @@ class Util{
             format_keywords: {
                 hour: '%H',
                 minute: '%M',
-                seconds: '%D',
+                seconds: '%S',
                 day: '%d',
                 month: '%m',
                 year: '%y',
