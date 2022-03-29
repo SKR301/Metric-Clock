@@ -97,7 +97,7 @@ class Util{
         this.version();
     }
     static version(){
-        console.log(' v1.0.0');
+        console.log(' v1.2.0');
     }
     static checkInputDateFormat(date, system){
         const element = date.split('-');
