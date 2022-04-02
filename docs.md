@@ -1,7 +1,7 @@
 **DSICLAIMER:** *I have spent a lot of time to create this documentation, so I hope you put the package to some good use.*
 
 # Metric-Clock
-A clock to tell time in metric(10) system. **v1.1.0**
+A clock to tell time in metric(10) system. **v1.3.0**
 <br /><br />
 
 ## Installation
